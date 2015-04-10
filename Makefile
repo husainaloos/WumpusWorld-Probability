@@ -1,7 +1,7 @@
 # Makefile
 
 CC = c++
-OBJECTS = Action.o Agent.o Location.o Orientation.o Percept.o WumpusWorld.o
+OBJECTS = Action.o Agent.o Location.o Orientation.o Percept.o WumpusWorld.o Probability.o LocationProbability.o
 
 all: wumpsim
 
@@ -25,6 +25,12 @@ Percept.o: Percept.h Percept.cc
 
 WumpusWorld.o: WumpusWorld.h WumpusWorld.cc
 	$(CC) -c WumpusWorld.cc
+
+Probability.o: Probability.h Probability.cc
+	$(CC) -c Probability.cc
+
+LocationProbability.o: LocationProbability.h LocationProbability.cc Location.h Probability.h
+	$(CC) -c LocationProbability.cc
 
 clean:
 	rm -f *.o wumpsim

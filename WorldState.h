@@ -16,6 +16,7 @@ public:
 	Location wumpusLocation;
 	Location goldLocation;
 	vector<Location> pitLocations;
+    
 	bool agentAlive;
 	bool agentHasArrow;
 	bool agentHasGold;
