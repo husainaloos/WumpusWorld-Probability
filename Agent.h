@@ -9,11 +9,11 @@
 class Agent
 {
 public:
-	Agent ();
-	~Agent ();
-	void Initialize ();
-	Action Process (Percept& percept);
-	void GameOver (int score);
+    Agent ();
+    ~Agent ();
+    void Initialize ();
+    Action Process (Percept& percept);
+    void GameOver (int score);
 };
 
 #endif // AGENT_H
